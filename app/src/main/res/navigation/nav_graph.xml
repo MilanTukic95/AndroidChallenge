@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/nav_graph"
+    app:startDestination="@id/LaunchesFragment">
+
+    <fragment
+        android:id="@+id/LaunchesFragment"
+        android:name="com.example.androidchallenge.ui.fragments.LaunchesFragment"
+        tools:layout="@layout/fragment_launches">
+
+
+        <action
+            android:id="@+id/action_LaunchesFragment_to_DetailsFragment"
+            app:destination="@id/DetailsFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/DetailsFragment"
+        android:name="com.example.androidchallenge.ui.fragments.DetailsFragment"
+        tools:layout="@layout/fragment_details">
+
+        <argument
+            android:name="itemDetail"
+            app:argType="com.example.androidchallenge.data.model.LaunchDetail"
+             />
+    </fragment>
+</navigation>

@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+    <item
+        android:id="@+id/actionSearch"
+        android:icon="@drawable/outline_search_24"
+        android:title="@string/label_search"
+        app:iconTint="@color/white"
+        app:actionViewClass="androidx.appcompat.widget.SearchView"
+        app:showAsAction="ifRoom|collapseActionView" />
+
+    <item
+        android:id="@+id/overflowMenu"
+        android:icon="@drawable/outline_more_vert_24"
+        app:iconTint="@color/white"
+        android:title=""
+        app:showAsAction="always">
+        <menu>
+            <item
+                android:id="@+id/actionAll"
+                android:title="@string/label_all"
+                app:showAsAction="never" />
+            <item
+                android:id="@+id/actionSuccess"
+                android:title="@string/label_success"
+                app:showAsAction="never" />
+            <item
+                android:id="@+id/actionUpcoming"
+                android:title="@string/label_upcoming"
+                app:showAsAction="never" />
+            <item
+                android:id="@+id/actionFailure"
+                android:title="@string/label_failure"
+                app:showAsAction="never" />
+        </menu>
+    </item>
+
+</menu>

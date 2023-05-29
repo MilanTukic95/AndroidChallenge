@@ -1,0 +1,11 @@
+<resources>
+    <string name="app_name">AndroidChallenge</string>
+    <string name="action_settings">Settings</string>
+    <!-- Strings used for fragments for navigation -->
+    <string name="label_launches">Launches</string>
+    <string name="label_search">Search</string>
+    <string name="label_all">All</string>
+    <string name="label_success">Success</string>
+    <string name="label_failure">Failure</string>
+    <string name="label_upcoming">Upcoming</string>
+</resources>
