@@ -8,5 +8,4 @@ data class Launch(
     var name: String?,
     val success: Boolean,
     val upcoming: Boolean,
-    val date_local: String
-)
+    val date_local: String)

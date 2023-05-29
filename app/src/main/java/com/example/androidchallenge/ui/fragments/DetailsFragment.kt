@@ -1,11 +1,15 @@
 package com.example.androidchallenge.ui.fragments
 
+import android.content.Intent
+import android.net.Uri
 import android.os.Bundle
 import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import androidx.navigation.fragment.navArgs
+import com.bumptech.glide.Glide
+import com.bumptech.glide.load.engine.DiskCacheStrategy
 import com.example.androidchallenge.databinding.FragmentDetailsBinding
 import dagger.hilt.android.AndroidEntryPoint
 
@@ -32,7 +36,16 @@ class DetailsFragment : Fragment() {
         val detail = args.itemDetail
         requireActivity().title = detail.name
 
+        binding.tvFullName.text = detail.full_name
+        binding.tvDescription.text = detail.details
+        binding.tvRegion.text = detail.region
+        binding.tvTimeZone.text = detail.timezone
+        binding.tvWebsite.text = detail.website
 
+        binding.tvWebsite.setOnClickListener{
+            val intent = Intent(Intent.ACTION_VIEW, Uri.parse(detail.website))
+            startActivity(intent)
+        }
         return binding.root
 
     }

@@ -6,5 +6,6 @@ data class Launchpad(
     val region: String,
     val timezone: String,
     val status: String,
-    val details: String
+    val details: String,
+    val full_name: String
 )

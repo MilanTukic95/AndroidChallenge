@@ -64,12 +64,16 @@ class LaunchesViewModel @Inject constructor(private val mainRepository: MainRepo
                             LaunchDetail(
                                 sourceObject.launchpad,
                                 sourceObject.name,
-                                sourceObject.links.patch.small,
+                                sourceObject.links.patch?.small,
                                 anotherObject.name,
                                 anotherObject.region,
                                 sourceObject.success,
                                 sourceObject.upcoming,
-                                sourceObject.date_local
+                                sourceObject.date_local,
+                                anotherObject.full_name,
+                                anotherObject.timezone,
+                                anotherObject.details,
+                                sourceObject.links.webcast
                             )
                         )
                     } else {

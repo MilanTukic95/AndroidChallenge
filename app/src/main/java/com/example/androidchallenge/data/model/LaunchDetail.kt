@@ -11,9 +11,14 @@ data class LaunchDetail(
     var region: String?,
     val success: Boolean,
     val upcoming: Boolean,
-    val date: String?
+    val date: String?,
+    val full_name: String?,
+    val timezone: String?,
+    val details: String?,
+    val website: String?
 
-) : Parcelable {
+
+    ) : Parcelable {
     constructor(parcel: Parcel) : this(
         parcel.readString(),
         parcel.readString(),
@@ -22,8 +27,12 @@ data class LaunchDetail(
         parcel.readString(),
         parcel.readByte() != 0.toByte(),
         parcel.readByte() != 0.toByte(),
+        parcel.readString(),
+        parcel.readString(),
+        parcel.readString(),
+        parcel.readString(),
         parcel.readString()
-    ) {
+        ) {
     }
 
     override fun describeContents(): Int {
